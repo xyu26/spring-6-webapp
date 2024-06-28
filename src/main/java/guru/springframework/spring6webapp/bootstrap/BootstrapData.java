@@ -7,6 +7,7 @@ import guru.springframework.spring6webapp.repositories.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+<<<<<<< HEAD
 @Component
 public class BootstrapData implements CommandLineRunner {
     private final BookRepository bookRepository;
@@ -15,6 +16,22 @@ public class BootstrapData implements CommandLineRunner {
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
     }
+=======
+/**
+ * Created by jt, Spring Framework Guru.
+ */
+@Component
+public class BootstrapData implements CommandLineRunner {
+
+    private final AuthorRepository authorRepository;
+    private final BookRepository bookRepository;
+
+    public BootstrapData(AuthorRepository authorRepository, BookRepository bookRepository) {
+        this.authorRepository = authorRepository;
+        this.bookRepository = bookRepository;
+    }
+
+>>>>>>> origin/4-bootstrap-data
     @Override
     public void run(String... args) throws Exception {
         Author eric = new Author();
@@ -48,5 +65,22 @@ public class BootstrapData implements CommandLineRunner {
         System.out.println("In Bootstrap");
         System.out.println("Author Count: " + authorRepository.count());
         System.out.println("Book Count: " + bookRepository.count());
+<<<<<<< HEAD
     }
 }
+=======
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/4-bootstrap-data

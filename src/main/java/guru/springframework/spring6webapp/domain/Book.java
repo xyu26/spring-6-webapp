@@ -19,7 +19,11 @@ public class Book {
 
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
+<<<<<<< HEAD
             inverseJoinColumns = @JoinColumn(name = "author_id"))
+=======
+        inverseJoinColumns = @JoinColumn(name = "author_id"))
+>>>>>>> origin/4-bootstrap-data
     private Set<Author> authors = new HashSet<>();
 
     public Set<Author> getAuthors() {
@@ -84,3 +88,9 @@ public class Book {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/4-bootstrap-data
